@@ -27,7 +27,7 @@ The pipeline:
 
 .
 ├── dags/
-│   └── pinecone_airflow_job.py
+│ └── pinecone_airflow_job.py
 ├── docker-compose.yaml
 ├── Dockerfile
 ├── requirements.txt
