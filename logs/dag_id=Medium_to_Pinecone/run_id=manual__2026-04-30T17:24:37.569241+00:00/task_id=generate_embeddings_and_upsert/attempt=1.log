@@ -1,0 +1,159 @@
+[2026-04-30T17:30:15.374+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-04-30T17:30:15.390+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Medium_to_Pinecone.generate_embeddings_and_upsert manual__2026-04-30T17:24:37.569241+00:00 [queued]>
+[2026-04-30T17:30:15.395+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Medium_to_Pinecone.generate_embeddings_and_upsert manual__2026-04-30T17:24:37.569241+00:00 [queued]>
+[2026-04-30T17:30:15.395+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2026-04-30T17:30:15.400+0000] {taskinstance.py:2890} INFO - Executing <Task(_PythonDecoratedOperator): generate_embeddings_and_upsert> on 2026-04-30 17:24:37.569241+00:00
+[2026-04-30T17:30:15.422+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Medium_to_Pinecone', 'generate_embeddings_and_upsert', 'manual__2026-04-30T17:24:37.569241+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/pinecone_***_job.py', '--cfg-path', '/tmp/tmp_upznff8']
+[2026-04-30T17:30:15.428+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask generate_embeddings_and_upsert
+[2026-04-30T17:30:15.428+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=11659) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-04-30T17:30:15.431+0000] {standard_task_runner.py:72} INFO - Started process 11668 to run task
+[2026-04-30T17:30:15.491+0000] {task_command.py:467} INFO - Running <TaskInstance: Medium_to_Pinecone.generate_embeddings_and_upsert manual__2026-04-30T17:24:37.569241+00:00 [running]> on host 9cf54d03a6ec
+[2026-04-30T17:30:15.551+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Medium_to_Pinecone' AIRFLOW_CTX_TASK_ID='generate_embeddings_and_upsert' AIRFLOW_CTX_EXECUTION_DATE='2026-04-30T17:24:37.569241+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-30T17:24:37.569241+00:00'
+[2026-04-30T17:30:15.553+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-04-30T17:30:15.612+0000] {SentenceTransformer.py:204} INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2026-04-30T17:30:17.218+0000] {discover_namespace_packages.py:12} INFO - Discovering subpackages in _NamespacePath(['/home/***/.local/lib/python3.12/site-packages/pinecone_plugins'])
+[2026-04-30T17:30:17.220+0000] {discover_plugins.py:9} INFO - Looking for plugins in pinecone_plugins.inference
+[2026-04-30T17:30:17.230+0000] {installation.py:10} INFO - Installing plugin inference into Pinecone
+[2026-04-30T17:30:17.474+0000] {logging_mixin.py:190} INFO - Total rows to ingest: 2498
+[2026-04-30T17:30:17.475+0000] {logging_mixin.py:190} INFO - Batch size: 100
+[2026-04-30T17:30:17.475+0000] {logging_mixin.py:190} INFO - Total batches: 25
+[2026-04-30T17:30:17.484+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:17.802+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  3.15it/s]
+[2026-04-30T17:30:17.977+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  6.80it/s]
+[2026-04-30T17:30:17.996+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  7.83it/s]
+[2026-04-30T17:30:19.328+0000] {logging_mixin.py:190} INFO - Upserted batch 1/25 with 100 records
+[2026-04-30T17:30:19.336+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:19.502+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  6.07it/s]
+[2026-04-30T17:30:19.789+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  6.71it/s]
+[2026-04-30T17:30:19.808+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  8.49it/s]
+[2026-04-30T17:30:20.290+0000] {logging_mixin.py:190} INFO - Upserted batch 2/25 with 100 records
+[2026-04-30T17:30:20.301+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:20.462+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  6.27it/s]
+[2026-04-30T17:30:20.657+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.79it/s]
+[2026-04-30T17:30:20.675+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 10.72it/s]
+[2026-04-30T17:30:21.842+0000] {logging_mixin.py:190} INFO - Upserted batch 3/25 with 100 records
+[2026-04-30T17:30:21.854+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:22.079+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  4.45it/s]
+[2026-04-30T17:30:22.180+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  6.58it/s]
+[2026-04-30T17:30:22.278+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  9.45it/s]
+[2026-04-30T17:30:22.815+0000] {logging_mixin.py:190} INFO - Upserted batch 4/25 with 100 records
+[2026-04-30T17:30:22.824+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:23.033+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  4.81it/s]
+[2026-04-30T17:30:23.201+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.61it/s]
+[2026-04-30T17:30:23.220+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 10.12it/s]
+[2026-04-30T17:30:23.976+0000] {logging_mixin.py:190} INFO - Upserted batch 5/25 with 100 records
+[2026-04-30T17:30:23.985+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:24.212+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  4.42it/s]
+[2026-04-30T17:30:24.382+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.24it/s]
+[2026-04-30T17:30:24.398+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  9.71it/s]
+[2026-04-30T17:30:24.945+0000] {logging_mixin.py:190} INFO - Upserted batch 6/25 with 100 records
+[2026-04-30T17:30:24.954+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:25.110+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  6.41it/s]
+[2026-04-30T17:30:25.273+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  9.93it/s]
+[2026-04-30T17:30:25.289+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 11.97it/s]
+[2026-04-30T17:30:25.883+0000] {logging_mixin.py:190} INFO - Upserted batch 7/25 with 100 records
+[2026-04-30T17:30:25.892+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:26.217+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  3.08it/s]
+[2026-04-30T17:30:26.397+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  6.64it/s]
+[2026-04-30T17:30:26.413+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  7.68it/s]
+[2026-04-30T17:30:26.980+0000] {logging_mixin.py:190} INFO - Upserted batch 8/25 with 100 records
+[2026-04-30T17:30:26.989+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:27.366+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:01,  2.66it/s]
+[2026-04-30T17:30:27.551+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  6.03it/s]
+[2026-04-30T17:30:27.572+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  6.88it/s]
+[2026-04-30T17:30:28.042+0000] {logging_mixin.py:190} INFO - Upserted batch 9/25 with 100 records
+[2026-04-30T17:30:28.053+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:28.355+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  3.33it/s]
+[2026-04-30T17:30:28.540+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  6.82it/s]
+[2026-04-30T17:30:28.563+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  7.87it/s]
+[2026-04-30T17:30:29.106+0000] {logging_mixin.py:190} INFO - Upserted batch 10/25 with 100 records
+[2026-04-30T17:30:29.111+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:29.261+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  6.69it/s]
+[2026-04-30T17:30:29.441+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  9.46it/s]
+[2026-04-30T17:30:29.459+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 11.49it/s]
+[2026-04-30T17:30:29.970+0000] {logging_mixin.py:190} INFO - Upserted batch 11/25 with 100 records
+[2026-04-30T17:30:29.983+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:30.204+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  4.55it/s]
+[2026-04-30T17:30:30.377+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.25it/s]
+[2026-04-30T17:30:30.395+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  9.72it/s]
+[2026-04-30T17:30:30.930+0000] {logging_mixin.py:190} INFO - Upserted batch 12/25 with 100 records
+[2026-04-30T17:30:30.939+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:31.136+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  5.11it/s]
+[2026-04-30T17:30:31.285+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  5.94it/s]
+[2026-04-30T17:30:31.390+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 10.44it/s]
+[2026-04-30T17:30:31.390+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  8.88it/s]
+[2026-04-30T17:30:31.862+0000] {logging_mixin.py:190} INFO - Upserted batch 13/25 with 100 records
+[2026-04-30T17:30:31.868+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:32.068+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  5.00it/s]
+[2026-04-30T17:30:32.247+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.48it/s]
+[2026-04-30T17:30:32.263+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 10.12it/s]
+[2026-04-30T17:30:32.827+0000] {logging_mixin.py:190} INFO - Upserted batch 14/25 with 100 records
+[2026-04-30T17:30:32.832+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:33.123+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  3.44it/s]
+[2026-04-30T17:30:33.298+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  4.49it/s]
+[2026-04-30T17:30:33.447+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  5.29it/s]
+[2026-04-30T17:30:33.491+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  6.07it/s]
+[2026-04-30T17:30:33.972+0000] {logging_mixin.py:190} INFO - Upserted batch 15/25 with 100 records
+[2026-04-30T17:30:33.977+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:34.243+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  3.77it/s]
+[2026-04-30T17:30:34.385+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  5.18it/s]
+[2026-04-30T17:30:34.513+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  6.13it/s]
+[2026-04-30T17:30:34.555+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  6.93it/s]
+[2026-04-30T17:30:35.035+0000] {logging_mixin.py:190} INFO - Upserted batch 16/25 with 100 records
+[2026-04-30T17:30:35.040+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:35.468+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:01,  2.34it/s]
+[2026-04-30T17:30:35.666+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  3.42it/s]
+[2026-04-30T17:30:35.814+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  4.42it/s]
+[2026-04-30T17:30:35.877+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  4.78it/s]
+[2026-04-30T17:30:36.427+0000] {logging_mixin.py:190} INFO - Upserted batch 17/25 with 100 records
+[2026-04-30T17:30:36.431+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:36.770+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:01,  2.95it/s]
+[2026-04-30T17:30:36.928+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  4.30it/s]
+[2026-04-30T17:30:37.038+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  8.25it/s]
+[2026-04-30T17:30:37.038+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  6.59it/s]
+[2026-04-30T17:30:37.661+0000] {logging_mixin.py:190} INFO - Upserted batch 18/25 with 100 records
+[2026-04-30T17:30:37.676+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:38.015+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:01,  2.96it/s]
+[2026-04-30T17:30:38.164+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  4.41it/s]
+[2026-04-30T17:30:38.301+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  5.38it/s]
+[2026-04-30T17:30:38.338+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  6.05it/s]
+[2026-04-30T17:30:38.851+0000] {logging_mixin.py:190} INFO - Upserted batch 19/25 with 100 records
+[2026-04-30T17:30:38.862+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:39.031+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  5.96it/s]
+[2026-04-30T17:30:39.210+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  9.10it/s]
+[2026-04-30T17:30:39.226+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 11.01it/s]
+[2026-04-30T17:30:39.707+0000] {logging_mixin.py:190} INFO - Upserted batch 20/25 with 100 records
+[2026-04-30T17:30:39.713+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:40.090+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:01,  2.66it/s]
+[2026-04-30T17:30:40.223+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  4.29it/s]
+[2026-04-30T17:30:40.323+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  8.44it/s]
+[2026-04-30T17:30:40.324+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  6.55it/s]
+[2026-04-30T17:30:40.789+0000] {logging_mixin.py:190} INFO - Upserted batch 21/25 with 100 records
+[2026-04-30T17:30:40.793+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:41.061+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  3.73it/s]
+[2026-04-30T17:30:41.184+0000] {logging_mixin.py:190} WARNING - Batches:  50%|#####     | 2/4 [00:00<00:00,  5.47it/s]
+[2026-04-30T17:30:41.286+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  6.86it/s]
+[2026-04-30T17:30:41.305+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  7.81it/s]
+[2026-04-30T17:30:42.064+0000] {logging_mixin.py:190} INFO - Upserted batch 22/25 with 100 records
+[2026-04-30T17:30:42.078+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:42.295+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  4.62it/s]
+[2026-04-30T17:30:42.471+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.23it/s]
+[2026-04-30T17:30:42.488+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00,  9.76it/s]
+[2026-04-30T17:30:43.076+0000] {logging_mixin.py:190} INFO - Upserted batch 23/25 with 100 records
+[2026-04-30T17:30:43.087+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:43.301+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  4.69it/s]
+[2026-04-30T17:30:43.457+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.84it/s]
+[2026-04-30T17:30:43.482+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 10.14it/s]
+[2026-04-30T17:30:43.975+0000] {logging_mixin.py:190} INFO - Upserted batch 24/25 with 100 records
+[2026-04-30T17:30:43.983+0000] {logging_mixin.py:190} WARNING - Batches:   0%|          | 0/4 [00:00<?, ?it/s]
+[2026-04-30T17:30:44.182+0000] {logging_mixin.py:190} WARNING - Batches:  25%|##5       | 1/4 [00:00<00:00,  5.03it/s]
+[2026-04-30T17:30:44.363+0000] {logging_mixin.py:190} WARNING - Batches:  75%|#######5  | 3/4 [00:00<00:00,  8.44it/s]
+[2026-04-30T17:30:44.374+0000] {logging_mixin.py:190} WARNING - Batches: 100%|##########| 4/4 [00:00<00:00, 10.25it/s]
+[2026-04-30T17:30:44.833+0000] {logging_mixin.py:190} INFO - Upserted batch 25/25 with 98 records
+[2026-04-30T17:30:44.834+0000] {logging_mixin.py:190} INFO - Successfully upserted 2498 records into Pinecone index 'semantic-search-fast'
+[2026-04-30T17:30:44.858+0000] {python.py:240} INFO - Done. Returned value was: semantic-search-fast
+[2026-04-30T17:30:44.911+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-04-30T17:30:44.913+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=Medium_to_Pinecone, task_id=generate_embeddings_and_upsert, run_id=manual__2026-04-30T17:24:37.569241+00:00, execution_date=20260430T172437, start_date=20260430T173015, end_date=20260430T173044
+[2026-04-30T17:30:44.990+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-04-30T17:30:45.016+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-04-30T17:30:45.017+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
