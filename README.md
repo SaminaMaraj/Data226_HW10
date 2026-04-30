@@ -24,3 +24,12 @@ The pipeline:
 ---
 
 ## Project Structure
+
+.
+├── dags/
+│   └── pinecone_airflow_job.py
+├── docker-compose.yaml
+├── Dockerfile
+├── requirements.txt
+├── logs/
+├── README.md
